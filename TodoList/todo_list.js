@@ -3,6 +3,8 @@ const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
 const clearCompletedBtn = document.getElementById("clearCompletedBtn");
 let tasks = [];
+console.debug(addTaskBtn)
+
 function addTask() {
     const taskText = taskInput.value.trim();
     if (taskText !== "") {
@@ -29,6 +31,8 @@ function clearCompletedTasks() {
     tasks = tasks.filter(task => !task.completed);
     displayTasks();
 }
+
 addTaskBtn.addEventListener("click", addTask);
+
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 displayTasks();
